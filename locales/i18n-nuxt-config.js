@@ -3,22 +3,22 @@ const I18N = {
   alwaysRedirect: true,
   locales: [
     {
+      code: 'ja',
+      iso: 'es-ES',
+      name: 'Japanese',
+      file: 'es/index.js'
+    },
+    {
       code: 'en',
       iso: 'en-US',
       name: 'English',
       file: 'en/index.js'
-    },
-    {
-      code: 'es',
-      iso: 'es-ES',
-      name: 'Español',
-      file: 'es/index.js'
     }
   ],
   lazy: true,
   seo: false,
   langDir: '/locales/',
-  defaultLocale: 'en',
+  defaultLocale: 'ja',
   parsePages: false
 }
 
