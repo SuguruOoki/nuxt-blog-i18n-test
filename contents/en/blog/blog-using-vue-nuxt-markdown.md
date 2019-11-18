@@ -3,7 +3,7 @@ name: 'blog-using-vue-nuxt-markdown'
 title: Website with blog and portfolio using Vue.js + Nuxt + Markdown
 year: 1 January 2019
 color: '#8e7964'
-trans: 'blog-usando-vue-nuxt-markdown'
+trans: 'blog-use-vue-nuxt-markdown'
 id: 'vue-nuxt-blog'
 description: |
   How I created my new website with portfolio and blog in two languages. What technology I used and why.
@@ -31,14 +31,14 @@ Nuxt, by following the architecture [JAMStack](https://jamstack.org/) is built t
 
 ### Importing posts on the main page depending on the language
 
-Using the asynchronous function <inline-code>asyncData</inline-code> that Nuxt provides only in its pages (it is not avalaible in its components) I import the Markdowns that I have saved in the folder <inline-code>content</inline-code> of the project. Later I return them in the form of a promise as an array of objects. As you can see below, this import depends on the constant <inline-code>blogs</inline-code> which will be the array <inline-code>blogsEs</inline-code> or <inline-code>blogsEn</inline-code> depending on the language of the page stored on the Vuex's state.
+Using the asynchronous function <inline-code>asyncData</inline-code> that Nuxt provides only in its pages (it is not avalaible in its components) I import the Markdowns that I have saved in the folder <inline-code>content</inline-code> of the project. Later I return them in the form of a promise as an array of objects. As you can see below, this import depends on the constant <inline-code>blogs</inline-code> which will be the array <inline-code>blogsJa</inline-code> or <inline-code>blogsEn</inline-code> depending on the language of the page stored on the Vuex's state.
 
 ```javascript
 import blogsEn from '~/contents/en/blogsEn.js'
-import blogsEs from '~/contents/es/blogsEs.js'
+import blogsJa from '~/contents/ja/blogsJa.js'
 
 async asyncData ({app}) {
-  const blogs = app.i18n.locale === 'en' ? blogsEn : blogsEs
+  const blogs = app.i18n.locale === 'en' ? blogsEn : blogsJa
   
   async function asyncImport (blogName) {
     const wholeMD = await import(`~/content/${app.i18n.locale}/blog/${blogName}.md`)
@@ -58,14 +58,14 @@ The reason why I'm importing the arrays containing the blogs names is because I 
 
 ```javascript
 import blogsEn from '~/contents/en/blogsEn.js'
-import blogsEs from '~/contents/es/blogsEs.js'
+import blogsJa from '~/contents/ja/blogsJa.js'
 
 generate: {
   routes: [
     '/es', '404'
   ]
   .concat(blogsEn.map(blog => `/blog/${blog}`))
-  .concat(blogsEs.map(blog => `es/blog/${blog}`))
+  .concat(blogsJa.map(blog => `ja/blog/${blog}`))
 }
 ```
 

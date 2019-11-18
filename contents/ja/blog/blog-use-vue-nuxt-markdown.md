@@ -1,9 +1,9 @@
 ---
-name: 'blog-usando-vue-nuxt-markdown'
-title: Web con blog y portfolio usando Vue.js + Nuxt + Markdown
+name: 'blog-use-vue-nuxt-markdown'
+title: Vue.js + Nuxt + Markdownを使ったブログとポートフォリオ
 year: 2019年1月1日
 color: '#8e7964'
-trans: 'blog-using-vue-nuxt-markdown'
+trans: 'blog-use-vue-nuxt-markdown'
 id: 'vue-nuxt-blog'
 description: |
 
@@ -11,7 +11,6 @@ description: |
 ---
 
 ## Nuxt でブログを作成した理由について
-
 
 トップページを見た方は、すでにご存知かもしませんが、私は[Suguru Ohki]（https://twitter.com/gurusu_program)、フロントエンドエンジニアであり、現在[TechBowl]（https://techbowl.co.jp/）で働いています。
 
