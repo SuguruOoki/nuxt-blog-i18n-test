@@ -2,7 +2,7 @@ const builtAt = new Date().toISOString()
 const path = require('path')
 const { I18N } = require('./locales/i18n-nuxt-config')
 import blogsEn from './contents/en/blogsEn.js'
-import blogsEs from './contents/es/blogsEs.js'
+import blogsEs from './contents/ja/blogsJa.js'
 import Mode from "frontmatter-markdown-loader/mode"
 
 const productionUrl = {
@@ -121,9 +121,9 @@ module.exports = {
 
   generate: {
     routes: [
-      '/es', '404'
+      '/ja', '404'
     ]
     .concat(blogsEn.map(w => `/blog/${w}`))
-    .concat(blogsEs.map(w => `es/blog/${w}`))
+    .concat(blogsEs.map(w => `ja/blog/${w}`))
   }
 }
