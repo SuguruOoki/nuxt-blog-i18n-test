@@ -2,23 +2,34 @@
   <header>
     <div class="header__info">
       <div class="container header__info-container">
-        <div class="header__copyright">
-          © {{ year }} — <span v-html="$t('header.credits')"/>
+        <div class="header__navi">
+          About
         </div>
-        <a href="#top" class="header__top-page">
-          ^
-        </a>
+        <div class="header__navi">
+          Intro
+        </div>
+        <div class="header__navi">
+          Service
+        </div>
+        <div class="header__navi">
+          Columns
+        </div>
+        <div class="header__navi">
+          Recruit
+        </div>
+        <div class="header__navi">
+          Contact
+        </div>
+        <div class="header__navi">
+          ご家族の方へ<br />
+          写真観覧はこちら
+        </div>
       </div>
     </div>
   </header>
 </template>
 <script>
 export default {
-  computed: {
-    year () {
-      return new Date().getFullYear()
-    }
-  }
 }
 </script>
 
